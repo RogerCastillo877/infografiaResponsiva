@@ -1,0 +1,217 @@
+/*
+font-family: 'Roboto Condensed', sans-serif;
+*/
+
+html, body{
+    margin: 0;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+body {
+    background-color: #000000;
+}
+
+#main_container{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 20;
+    max-width: 550px;
+    max-height: 400px;
+    overflow: hidden;
+}
+
+/* Botonera */
+.botonera{
+    padding: 0;
+    margin: 24px;
+    margin-left: 10px;
+    position: absolute;
+    z-index: 1000;
+}
+
+.botonera li{
+    display: inline-block;
+    color: #ffffff;
+    margin-right: 20px;
+    cursor: pointer;
+}
+.botonera li .cuadro{
+    display: inline-block;
+    border-radius: 5px;
+    width: 22px;
+    height: 22px;
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+    margin-right: 6px;
+    vertical-align: bottom;
+}
+.botonera li.active .cuadro{
+    background-color: #000000;
+}
+.botonera li .rotulo{
+    display: inline-block;
+    vertical-align: bottom;
+    font-size: 16px;
+    width: 0;
+    overflow: hidden;
+    transition: width 0.6s ease-in;
+    -webkit-transition: width 0.6s ease-in;
+    -moz-transition: width 0.6s ease-in;
+    -ms-transition: width 0.6s ease-in;
+    -o-transition: width 0.6s ease-in;
+}
+.botonera li.active .rotulo{
+    width: 200px;
+}
+.botonera li .rotulo span{
+    width: 200px;
+    display: block;
+}
+
+
+/* Contenidos */
+
+ul.contents{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 300%;
+    padding: 0;
+    margin: 0;
+    transition: 1s ease-in;
+    -webkit-transition: 1s ease-in;
+    -moz-transition: 1s ease-in;
+    -ms-transition: 1s ease-in;
+    -o-transition: 1s ease-in;
+}
+/* Agregar el contenedor interno antesde la clase hace que ese
+estilo manden sobre cualquier otro porque en ningún otro hay idenficador*/
+#main_container ul.contents.bloque1 {
+    left: 0;
+}
+#main_container ul.contents.bloque2 {
+    left: -100%;
+}
+#main_container ul.contents.bloque3 {
+    left: -200%;
+}
+ul.contents li{
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+    width: 33%;
+}
+/* Contenedor de las letras */
+.info_block{
+    color:#ffffff;
+    font-family: 'Roboto Condensed', sans-serif;
+    position: absolute;
+}
+.info_block h1{
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+.info_block p{
+    font-size: 12px;
+    margin-top: 0;
+}
+
+/* Bloque1 */
+#bloque1 .info_block {
+    width: 60%;
+    left: 30%;
+    bottom: 10px;
+}
+#fase1_cohete {
+    position: absolute;
+    bottom: 0;
+    left: 3%;
+}
+#fase1_cohete.animated{
+    transition: bottom 3s ease-in;
+    -webkit-transition: bottom 3s ease-in;
+    -moz-transition: bottom 3s ease-in;
+    -ms-transition: bottom 3s ease-in;
+    -o-transition: bottom 3s ease-in;
+}
+#fase1_cohete.on{
+    bottom: 450px;
+}
+#bloque1 .flecha {
+    position: absolute;
+    bottom: 0;
+    left: 20%;
+}
+/* Altura del cuerpo de la flecha */
+.flecha_bottom {
+    height: 0px;
+    width: 6px;
+    margin: 0 auto; /*revisar para dejarlo en 0*/
+    background-color: #ff6600;
+}
+/* para que tengan determinada posición de animación se les agrega una clase*/
+.flecha_bottom.animated {
+    transition: height 1s ease-in;
+    -webkit-transition: height 1s ease-in;
+    -moz-transition: height 1s ease-in;
+    -ms-transition: height 1s ease-in;
+    -o-transition: height 1s ease-in;
+}
+.flecha_bottom.on {
+    height: 140px;
+}
+
+/* Bloque2 */
+#fase2_cohete {
+    position: absolute;
+    -ms-transform: rotate(160deg);
+    -webkit-transform: rotate(160deg);
+    transform: rotate(160deg);
+    top: 140px;
+    left: 40px;
+}
+#fase2_tierra {
+    position: absolute;
+    top: 60px;
+    left: 30px;
+}
+#fase2_marte {
+    position: absolute;
+    bottom: 30px;
+    right: 10%;
+}
+#fase2_curva {
+    position: absolute;
+    top: 135px;
+    left: 55px;
+}
+#bloque2 .info_block {
+    position: absolute;
+    width: 55%;
+    right: 12%;
+    top: 15%;
+}
+
+/* Bloque3 */
+#fase3_marte {
+    position: absolute;
+    top: 80px;
+    left: 10px;
+}
+#fase3_sonda {
+    position: absolute;
+    top: 80px;
+    left: 10px;
+}
+#bloque3 .info_block {
+    position: absolute;
+    width: 40%;
+    right: 4%;
+    top: 30%;
+}
