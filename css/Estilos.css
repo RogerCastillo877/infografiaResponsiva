@@ -176,6 +176,26 @@ ul.contents li{
     top: 140px;
     left: 40px;
 }
+#fase2_cohete.animated{
+
+}
+#fase2_cohete.on{
+    animation: arc 3s linear;
+}
+@keyframes arc {
+    from{
+        transform:
+            rotate(40deg)
+            translate(0px)
+            rotate(120deg)
+    }
+    to{
+        transform:
+            rotate(30deg)
+            translate(330px)
+            rotate(55deg)
+    }
+}
 #fase2_tierra {
     position: absolute;
     top: 60px;

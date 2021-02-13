@@ -44,14 +44,16 @@ function descargaBloque1(){
     $(".flecha_bottom").removeClass("on");
 }
 function cargaBloque2(){
-
+    $("#fase2_cohete").addClass("on");
+    $("#fase2_cohete").addClass("animated");
 }
 function descargaBloque2(){
-    
+    $("#fase2_cohete").removeClass("on");
+    $("#fase2_cohete").removeClass("animated");
 }
 function cargaBloque3(){
     $("#fase3_sonda").addClass("on");
 }
 function descargaBloque3(){
-    $("#fase3_sonda").removeClass("on")
+    $("#fase3_sonda").removeClass("on");
 }
