@@ -8,20 +8,32 @@ $(document).ready(function(){
 
             clickedBlock = $(this).data("block");
             
-            $("ul.contents").removeClass(lastBlock);
-
-            $("ul.contents").addClass("bloque"+clickedBlock);
+            $("ul.contents").removeClass(lastBlock)
+                .addClass("bloque"+clickedBlock)
+                .bind("transitionEnd webkitTransitionEnd oTransitionEnd MSTransitionEnd", arrancaTrasTransicion);
             lastBlock = "bloque"+clickedBlock;
 
-            window["cargaBloque" + clickedBlock]();
+            window["descargaBloque" + clickedBlock]();
         }        
     });
+    initBloque1();
     cargaBloque1();
 });
 
+function arrancaTrasTransicion(){
+    window["cargaBloque" + clickedBlock]();
+    $("ul.contents").unbind("transitionEnd webkitTransitionEnd oTransitionEnd MSTransitionEnd", arrancaTrasTransicion);
+}
+function initBloque1(){
+    $(".flecha_bottom").bind("transitionEnd webkitTransitionEnd oTransitionEnd MSTransitionEnd", function(){
+        $("#fase1_cohete").addClass("on");
+    });
+    $("#fase1_cohete").bind("transitionEnd webkitTransitionEnd oTransitionEnd MSTransitionEnd", function(){
+        descargaBloque1();
+    });
+}
 function cargaBloque1(){
     $("#fase1_cohete").addClass("animated");
-    $("#fase1_cohete").addClass("on");
     $(".flecha_bottom").addClass("animated");
     $(".flecha_bottom").addClass("on");
 }
