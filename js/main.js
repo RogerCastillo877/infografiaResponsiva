@@ -50,8 +50,8 @@ function descargaBloque2(){
     
 }
 function cargaBloque3(){
-
+    $("#fase3_sonda").addClass("on");
 }
 function descargaBloque3(){
-    
+    $("#fase3_sonda").removeClass("on")
 }

@@ -209,6 +209,17 @@ ul.contents li{
     top: 80px;
     left: 10px;
 }
+#fase3_sonda.on{
+    animation: circ 3s infinite linear;
+}
+@keyframes circ {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
 #bloque3 .info_block {
     position: absolute;
     width: 40%;
