@@ -6,8 +6,7 @@ html, body{
     margin: 0;
     font-family: 'Roboto Condensed', sans-serif;
 }
-
-body {
+body{
     background-color: #000000;
 }
 
@@ -18,7 +17,7 @@ body {
     bottom: 0;
     left: 0;
     z-index: 20;
-    max-width: 550px;
+    max-width: 700px;
     max-height: 400px;
     overflow: hidden;
 }
@@ -245,4 +244,84 @@ ul.contents li{
     width: 40%;
     right: 4%;
     top: 30%;
+}
+
+@media screen and (max-width: 480px){
+    .botonera li .rotulo{
+        display: none;
+    }
+    #main_container{
+        position: relative;
+        height: 100%;
+        max-height: inherit;
+    }
+    ul.contents li{
+        height: auto;
+        overflow: auto;
+    }
+    .graph_block{
+        position: relative;
+        margin: 0 auto;
+        display: block;
+        width: 100%;
+        height: 400px;
+    }
+    .info_block{
+        position: inherit !important;
+        margin: 0 auto !important;
+        bottom: auto !important;
+        left: auto !important;
+        width: 90% !important;
+    }
+    #fase2_curva{
+        display: none;
+    }
+    #fase2_cohete {
+        -ms-transform: rotate(135deg);
+        -webkit-transform: rotate(135deg);
+        transform: rotate(135deg);
+        top: 150px;
+        left: 70px;
+    }
+    /* Al dejar esta query vacia las transformaciones se eliminan */
+    @keyframes arc {
+        from{
+             transform:
+         }
+         to{
+              transform:
+         }
+    }
+    /* En el bloque 2 se agrega y quita la clase animated para utilizarla aquí */
+    #fase2_cohete.animated{
+        transition: 2s ease-in;
+        -webkit-transition: 2s ease-in;
+        -moz-transition: 2s ease-in;
+        -ms-transition: 2s ease-in;
+        -o-transition: 2s ease-in;
+    }
+    #fase2_cohete.on {
+        top: 250px;
+        left: 170px;
+    }
+    #bloque2 .info_block {
+        right: auto;
+        top: auto;
+    }
+    #fase3_marte{
+        top: 80px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+    }
+    #fase3_sonda{
+        top: 80px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+    }
+    #bloque3 .info_block{
+        right: auto;
+        top: auto;
+    }
 }
